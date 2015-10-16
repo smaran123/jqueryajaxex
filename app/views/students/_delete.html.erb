@@ -1,0 +1,10 @@
+<h3>Delete student</h3>
+
+
+<ul class="errors"></ul>
+Are you sure you wish to delete <b><%= @student.first_name %></b>?
+</div>
+
+
+  <%= link_to "Yes, Delete This student", student_path(student), method: :delete, remote: true, class: "btn btn-danger" %>
+  <%= link_to "No, Please Don't", "#", class: "btn", data: { dismiss: "modal" } 

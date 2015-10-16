@@ -1,0 +1,30 @@
+<%= form_for([@product],:remote => :true, :method => "PUT") do |f| %>
+<div class="row">
+      <div class="col-xs-12 form-group">
+        <%= f.label :name, class: "control-label" %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+    </div>
+
+     <div class="row">
+      <div class="col-xs-12 form-group">
+        <%= f.label :description, class: "control-label" %>
+        <%= f.text_field :description, class: "form-control" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 form-group">
+        <%= f.label :category %>
+        <%= f.text_field :category, class: "form-control" %>
+      </div>
+    </div>
+   
+
+    <div class="row">
+      <div class="col-xs-12 form-group">
+        <%= f.submit "Update", class: "btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+
+
