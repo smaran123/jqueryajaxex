@@ -25,7 +25,8 @@
 <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
 <% else %>
 <li><%= link_to "Sign Up", new_user_registration_path %></li>
-
+<li><%= link_to "BuyerSign Up", new_user_registration_path(:role => "buyer") %></li>
+<li><%= link_to "SellerSign Up", new_user_registration_path(:role => "seller") %></li>
 <li><%= link_to "Sign in", new_user_session_path %></li>
 <% end %>
 

@@ -1,6 +1,16 @@
 <h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name, :role => params[:role])) do |f| %>
+
+
+<div class="field">
+<%= f.hidden_field :role, :value => params[:role] %>
+</div>
+
+
+
+
+
   <%= devise_error_messages! %>
 
   <div class="field">
