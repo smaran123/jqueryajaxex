@@ -1,1 +1,7 @@
-$(".lists").html('<%= escape_javascript render :partial => 'index' %>') ;
+
+
+<% if @student.errors.any? %>
+  $(".error").html("<%= escape_javascript render :partial => 'error' %>");
+<% else %>
+$(".lists").html('<%= escape_javascript render :partial => 'index' %>');
+<% end %>
