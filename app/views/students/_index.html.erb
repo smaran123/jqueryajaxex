@@ -4,13 +4,13 @@
 <div class="row edit">
 <div class="col-md-6 col-md-offset-3">
 
-  <h3>students</h3>
+  <center><h3>Students</h3></center>
   <div style="float:right;">
-<%= link_to "New student", new_student_path, :remote => true %>
+<%= link_to "New Student", new_student_path, :remote => true %>
 </div>
   <table class="table table-bordered table-striped">
     <tr>
-      <th>student No</th>
+      <th>SNo</th>
       <th>FirstName</th>
       <th>LastName</th>
       <th>Email</th>
@@ -33,10 +33,10 @@
         </td>
         
                 <td>
-        <%= link_to "Edit", edit_student_path(student), class: "btn btn-primary", :remote => true %>
-        <%= link_to "Show", student_path(student), class: "btn btn-primary", :remote => true %>
+        <%= link_to "Edit", edit_student_path(student), class: "btn btn-warning", :remote => true %>
+        <%= link_to "Show", student_path(student), class: "btn btn-success", :remote => true %>
         <%= link_to "ajax link", home_index_path, class: "btn btn-primary", :remote => true %>
-        <%= link_to "Destroy", student_path(student), :method => :delete, :remote => true,class: "btn btn-danger" %>
+        <%= link_to "Destroy", student_path(student), :method => :delete,:data => {:confirm => "are you sure?"}, :remote => true,class: "btn btn-danger" %>
         </td>
       </tr>
       </div>
@@ -45,12 +45,6 @@
 </div>
 </div>
 
-
-<div class="home">
-
-</div>
-
-
-<div class="show">
+<div class="new">
 
 </div>
